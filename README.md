@@ -1,14 +1,19 @@
-# esp32-ble-midi-controller
-Low-Latency BLE MIDI Controller
+🛠 Technical Specs
+## Firmware (C++ / ESP-IDF)
+Concurrency: Leverages FreeRTOS tasks to handle MIDI message processing and BLE advertising independently, ensuring zero-latency performance.
 
-Overview: > A professional-grade MIDI controller built with ESP32, featuring a 4x4 velocity-sensitive matrix and a Web MIDI dashboard for real-time configuration.
+Peripheral Management: Implements an efficient 4x4 matrix scanning algorithm with software-based debouncing logic.
 
-Key Features:
+Communication: Uses BLE (Bluetooth Low Energy) MIDI 1.0 protocol for seamless wireless integration with DAWs (Ableton, Logic Pro) and Web Browsers.
 
-Hardware: Custom PCB designed in EasyEDA.
+## Hardware (PCB Design)
+Microcontroller: ESP32-WROOM-32 (Dual-core 240MHz).
 
-Firmware: Developed in C++ using PlatformIO and FreeRTOS for multi-threading.
+Design Tool: EasyEDA for professional-grade PCB layout and routing.
 
-Frontend: JavaScript-based dashboard using the Web MIDI API.
+Power Management: Integrated 3.3V LDO regulator and decoupling capacitors for signal integrity.
 
-Communication: Bluetooth Low Energy (BLE) for wireless performance.
+## Web Dashboard (JavaScript)
+Web MIDI API: Direct hardware-to-browser communication without external drivers.
+
+UI/UX: Responsive dashboard built with vanilla JavaScript (or React) to map MIDI notes and monitor device status in real-time.
