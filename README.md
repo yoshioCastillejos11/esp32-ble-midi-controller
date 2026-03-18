@@ -1,4 +1,4 @@
-🛠 Technical Specs
+# 🛠 Technical Specs
 ## Firmware (C++ / ESP-IDF)
 Concurrency: Leverages FreeRTOS tasks to handle MIDI message processing and BLE advertising independently, ensuring zero-latency performance.
 
